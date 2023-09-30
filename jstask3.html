@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstask3</title>
+    <style>
+        body {
+            border: 2px solid black;
+        }
+
+        div,
+        div {
+            padding: 10px;
+        }
+
+        label{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mult & Div calculator</h1>
+    <div class="calc">
+        <div>
+            <label for="firstnumber">First Number:</label>
+            <input type="text" id="firstNumber">
+        </div>
+
+        <div>
+            <label for="secondnumber">Second Number:</label>
+            <input type="text" id="secondNumber">
+        </div>
+
+        <div>
+            <button onclick="multiply()">Multiply</button>
+            <button onclick="divide()">Divide</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+</body>
+<script>
+    function multiply() {
+        var firstNumber = parseFloat(document.getElementById("firstNumber").value);
+        var secondNumber = parseFloat(document.getElementById("secondNumber").value);
+        var result = firstNumber * secondNumber;
+        document.getElementById("result").innerHTML = "Result: " + result;
+    }
+
+    function divide() {
+        var firstNumber = parseFloat(document.getElementById("firstNumber").value);
+        var secondNumber = parseFloat(document.getElementById("secondNumber").value);
+        var result = firstNumber / secondNumber;
+        document.getElementById("result").innerHTML = "Result: " + result;
+    }
+</script>
+
+</html>
